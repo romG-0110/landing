@@ -1,82 +1,837 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<title>FIGMA | Макеты для верстки — Верстка страницы</title>
-	<meta name="description" content="Макет для верстки сайта был взял с телеграм канала FIGMA | Макеты для верстки">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
 </head>
+
 <body>
-		<!-- Начало: Данный блок удалять нельзя -->
-		<style>
-			.maketforfigma{
-				flex: 0 0 auto;
-				/*background: #303b44;*/
-				/*background: #5CDB95;*/
-				background: #313a46;
-				font-weight: bold;
-				display: flex;
-			}
-			.maketforfigma img{
-				border-radius: 10px;
-				margin: 4px 0 0 4px;
-			}
-			.maketforfigma p {
-				/*color: #fff;*/
-				/*color: #05386B;*/
-				color: #98a6ad;
-				text-decoration: none;
-				letter-spacing: .01875rem;
-				font-size: .775rem;
-				padding: 0 10px;
-				line-height: 0.70rem;
-			}
 
-			.maketforfigma p > a {
-				/*color: #08ff00;*/
-				/*color: #EDF5E1;*/
-				color: #bbe4f0;
-				font-weight: bold;
-			}
-			.maketforfigma p > a:hover {
-				/*color: #ffa001*/
-				/*color: #379683*/
-				color: #ffffff
-			}
 
-			.main{
-				flex: 1 0 auto;
-			}
 
-			html{
-				height: 100%;
-			}
+	<style>
 
-			body{
-				display: flex;
-				flex-direction: column;
-				height: 100%;
-				padding: 0;
-				margin: 0;
-			}
-		</style>
-		<div class="maketforfigma">
-			<a href="https://t.me/s/FigmaToHTML" target="_blank">
-				<img src="logo.png">
-			</a>
-			<div>
-				<p>
-					Данная верстка, была реализована пользователем в рамках обучающего телеграм канал <a href="https://t.me/s/FigmaToHTML/2" target="_blank">FIGMA | Макеты для верстки</a>
-				</p>
-				<p>
-					При помощи бота <a href="https://t.me/HtmlCodeForMoney_bot?from_git" target="_blank">FIGMA | 💵 Верстай за деньги</a> пользователь получил оплату за верстку этого сайта и попал в рейтинги сайта
-					<a href="https://maketforfigma.ru" target="_blank">FIGMA — Макеты для верстки</a>
-				</p>
-			</div>
-		</div>
-		<!-- Конец -->
 
-		<div class="main">
-			В данном блоке размещается верстка
-		</div>
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+    width: 100%;
+}
+main, header, section, footer {
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+.container {
+    max-width: 1461px;
+    margin: 0 auto;
+}
+
+.main {
+    width: 100%;
+    background-image: url('../image/main-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 58px 85px;
+}
+
+.header__logo a {
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 33px;
+    letter-spacing: 0.01em;
+    text-transform: capitalize;
+    color: #FFFFFF;
+}
+
+.nav .flex__ul {
+    display: flex;
+    column-gap: 50px;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav .flex__ul a {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+    color: #FFFFFF;
+    transition: all 0.2s linear;
+}
+.nav .flex__ul a:hover {
+    color: #b4b4b4;
+}
+
+.header .search__box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header .search__box i {
+    color: #fff;
+}
+
+.header .search__box input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 17px;
+    line-height: 23px;
+    margin-left: 18px;
+}
+.header .search__box input::placeholder {
+    color: #fff;
+}
+
+.home__section {
+    padding: 200px 85px;
+    display: flex;
+    align-items: center;
+    column-gap: 400px;
+    padding-bottom: 500px;
+}
+
+.home__section .home__social {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    row-gap: 26px;
+    margin-top: 50px;
+}
+.home__social span {
+    position: absolute;
+    width: 100px;
+    left: -35px;
+    top: -70px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+    color: #FFFFFF;
+    transform: rotate(90deg);
+}
+
+.home__social .social__icons {
+    display: flex;
+    flex-direction: column;
+    row-gap: 26px;
+}
+
+.home__info > span {
+    position: relative;
+    margin-left: 110px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    color: #FFC178;
+}
+
+.home__info > span:before {
+    content: '';
+    position: absolute;
+    background: #FFC178;
+    width: 72px;
+    height: 2px;
+    left: -105px;
+    top: 10px;
+}
+
+.home__info h1 {
+    font-weight: 700;
+    margin-top: 40px;
+    font-size: 96px;
+    line-height: 100px;
+    text-transform: capitalize;
+    color: #FFFFFF;
+
+}
+.home__info h1 span {
+    font-weight: 400;
+
+}
+
+.home__scroll {
+    margin-top: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.home__scroll a {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.home__scroll a span{
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+    color: #FFFFFF;
+    
+}
+.home__scroll a i {
+    color: #FFFFFF;
+    font-size: 22px;
+    margin-left: 10px;
+}
+
+.section__about {
+    padding-bottom: 250px;
+}
+
+.section__about .about__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 200px;
+    margin-top: 215px;
+}
+
+.section__about .about__img {
+    max-width: 598px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.about__text-box {
+    max-width: 650px;
+}
+.about__text-box span {
+    position: relative;
+    margin-left: 107px;
+    margin-bottom: 27px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    color: #FBD784;
+}
+
+.about__text-box span:before {
+    content: '';
+    position: absolute;
+    background: #FFC178;
+    width: 72px;
+    height: 2px;
+    left: -105px;
+    top: 10px;
+}
+
+.about__text-box h2 {
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 87px;
+    color: #FFFFFF;
+    margin-bottom: 27px;
+}
+.about__text-box p {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 32px;
+    color: #FFFFFF;
+    margin-bottom: 27px;
+}
+
+.about__btn-box {
+    display: flex;
+    vertical-align: middle;
+    align-items: center;
+}
+
+.about__btn-box button {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    color: #FBD784;
+    border: none;
+    cursor: pointer;
+    background: transparent;
+
+}
+.about__btn-box i {
+    color: #FBD784;
+    font-size: 18px;
+    line-height: 25px;
+    margin-left: 10px;
+}
+
+.section__info {
+    padding-top: 50px;
+    padding-bottom: 200px;
+    background: #000;
+}
+
+.section__info .info__chevron {
+    position: absolute;
+}
+
+.section__info .left {
+    left: 2%;
+    top: 50%;
+}
+.section__info .right {
+    right: 2%;
+    top: 50%;
+}
+
+.section__info-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 985px; */
+    background-image: url(/image/info-image.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    left: 0;
+    right: 0;
+}
+.section__info-container .info__content {
+    margin-top: 400px;
+    text-align: center;
+}
+.section__info-container .info__content span{
+    position: relative;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    color: #FBD784;
+}
+.section__info-container .info__content span:before{
+    content: '';
+    position: absolute;
+    background: #FFC178;
+    width: 72px;
+    height: 2px;
+    left: -105px;
+    top: 10px;
+}
+.section__info-container .info__content span:after{
+    content: '';
+    position: absolute;
+    background: #FFC178;
+    width: 72px;
+    height: 2px;
+    right: -105px;
+    top: 10px;
+    margin-bottom: 25px;
+}
+
+.section__info-container .info__content h2{
+    margin: 0 auto;
+    max-width: 700px;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 87px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-bottom: 27px;
+}
+.section__info-container .info__content p{
+    max-width: 935px;
+    margin: 0 auto;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 32px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-bottom: 40px;
+}
+
+.section__info-container .info__content .info__btn-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+.section__info-container .info__content .info__btn-box button{
+    background: transparent;
+    border: none;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    color: #FBD784;
+    cursor: pointer;
+}
+.section__info-container .info__content .info__btn-box i{
+    color: #FBD784;
+    cursor: pointer;
+    margin-left: 10px;
+    font-size: 22px;
+}
+
+
+.section__preview {
+    background-color: #000;
+    padding-bottom: 200px;
+    padding-top: 26px;
+}
+
+.section__preview .preview__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 200px;
+}
+
+.section__preview .preview__img {
+    max-width: 598px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.preview__text-box {
+    max-width: 650px;
+}
+.preview__text-box span {
+    position: relative;
+    margin-left: 107px;
+    margin-bottom: 27px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    color: #FBD784;
+}
+
+.preview__text-box span:before {
+    content: '';
+    position: absolute;
+    background: #FFC178;
+    width: 72px;
+    height: 2px;
+    left: -105px;
+    top: 10px;
+}
+
+.preview__text-box h2 {
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 87px;
+    color: #FFFFFF;
+    margin-bottom: 27px;
+}
+.preview__text-box p {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 32px;
+    color: #FFFFFF;
+    margin-bottom: 27px;
+}
+
+.preview__btn-box {
+    display: flex;
+    vertical-align: middle;
+    align-items: center;
+}
+
+.preview__btn-box button {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    color: #FBD784;
+    border: none;
+    cursor: pointer;
+    background: transparent;
+
+}
+.preview__btn-box i {
+    color: #FBD784;
+    font-size: 18px;
+    line-height: 25px;
+    margin-left: 10px;
+}
+
+.section__top {
+    background-color: #000;
+}
+
+.section__top .top__container .top__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.section__top .top__container .top__content a{
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 65px;
+    letter-spacing: 0.01em;
+    text-transform: capitalize;
+    color: #FFFFFF;
+}
+.section__top .top__container hr{
+    background: #FFFFFF;
+    mix-blend-mode: normal;
+    opacity: 0.3;
+    margin-top: 55px;
+}
+.section__top .top__container .top__content span{
+    font-size: 22px;
+    line-height: 29px;
+    letter-spacing: -0.3px;
+    color: #FFFFFF;
+}
+.section__top .top__container .top__content .btn__top{
+    display: inline-block;
+    background: #FFA343;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 22px;
+    color: #000000;
+    padding: 24px 70px;
+    margin-left: 56px;
+}
+
+.footer {
+    background-color: #000;
+    padding-top: 55px;
+    padding-bottom: 100px;
+}
+
+.footer .footer__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    gap: 250px;
+}
+.footer .footer__container .footer__mailing {
+    max-width: 400px;
+}
+.footer .footer__container .footer__mailing h2{
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 49px;
+    letter-spacing: -0.3px;
+    color: #FFFFFF;
+}
+
+.footer__mailing .mail__box {
+    position: relative;
+    margin-top: 50px;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+}
+.footer__mailing .mail__box:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1.38px;
+    background: #fff;
+    opacity: 0.3;
+    mix-blend-mode: normal;
+    left: 0;
+    bottom: 0;
+}
+.footer__mailing .mail__box input{
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 10px 15px;
+    color: #fff;
+}
+
+.mail__btn-box {
+    width: 70px;
+    height: 70px;
+    background: #FFA343;
+    border-radius: 8px 8px 0px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    
+}
+.mail__btn-box i{
+    color: #000000;
+    font-size: 25px;
+
+}
+
+.footer__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    gap: 200px;
+
+}
+.footer__content h3{
+    font-weight: 700;
+    font-size: 20px;
+    color: #FFD1A0;
+    margin-bottom: 45px;
+}
+.footer__content ul{
+    list-style: none;
+}
+.footer__content ul li{
+    margin-top: 25px;
+    list-style: none;
+}
+.footer__content ul a{
+    text-decoration: none;
+    font-size: 19px;
+    line-height: 0px;
+    letter-spacing: -0.204545px;
+    color: #FFFFFF;
+}
+
+.footer__top {
+    margin-top: 36px;
+}
+
+.footer__top-container {
+    padding-left: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.footer__help a {
+    text-decoration: none;
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: -0.204545px;
+    color: #FFFFFF;
+    margin-right: 50px;
+}
+
+.footer__socials {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 51px;
+}
+
+.footer__copyright {
+    margin-top: 150px;
+    width: 100%;
+    text-align: center;
+}
+
+.footer__copyright span {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 32px;
+    text-align: center;
+    color: #FFFFFF;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+	</style>
+
+    <main class="main">
+        <header class="header">
+            <div class="header__logo">
+                <a href="#">QWERy</a>
+            </div>
+            <nav class="nav">
+                <ul class="flex__ul">
+                    <li><a href="#">Information</a></li>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Culture</a></li>
+                </ul>
+            </nav>
+            <div class="search__box">
+                <i class='bx bx-search'></i>
+                <input type="search" placeholder="Search">
+            </div>
+        </header>
+
+        <section class="home__section" id="home">
+            <div class="home__social">
+                <span>Follow us</span>
+                <div class="social__icons">
+                    <a href="https://www.twitter.com" target="_blank"><img src="./image/twitter.svg" alt="instagram"
+                            width="24" height="24"></a>
+                    <a href="https://www.instagram.com" target="_blank"><img src="./image/instagram.svg" alt="twitter"
+                            width="24" height="24"></a>
+                    <a href="https://www.facebook.com" target="_blank"><img src="./image/Facebook.svg" alt="facebook"
+                            width="24" height="24"></a>
+                </div>
+            </div>
+            <div class="home__info">
+                <span>explore the Nature Beauty</span>
+                <div class="home__text-box">
+                    <h1>Discover <br><span>Wonderful Indonesia</span></h1>
+                </div>
+                <div class="home__scroll">
+                    <a href="#">
+                        <span>Scroll down</span>
+                        <i class='bx bx-down-arrow-alt'></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section__about">
+            <div class="container about__container">
+                <img src="./image/about-image.jpg" class="about__img" alt="about image" width="598" height="720">
+                <div class="about__text-box">
+                    <span>EAST nUSA TENGGARA</span>
+                    <h2>Have you enjoyed your holiday?</h2>
+                    <p>You will be amazed if you take part in this sailing Komodo island tour package. So it is also
+                        mandatory for you, besides enjoying Komodo tourism on Komodo Island, you also have to taste the
+                        marine tourism. The beautiful waters of Komodo will make you meet many travelers from other
+                        countries.</p>
+                    <div class="about__btn-box">
+                        <button>read more</button>
+                        <i class='bx bx-right-arrow-alt'></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <section class="section__info">
+
+
+        <div class="container section__info-container">
+            <img src="/image/chevron_big_left.svg" alt="chevron" width="30" height="30" class="info__chevron left">
+            <img src="/image/chevron_big_right.svg" alt="chevron" width="30" height="30" class="info__chevron right">
+            <div class="info__content">
+                <span>Bromo</span>
+                <div class="info__text-box">
+                    <h2>Steady your steps, we will climb together!</h2>
+                    <p>Enjoying the vast expanse of the sea of ​​​​sand, witnessing the splendor of Mount Semeru that
+                        soars into the sky, and gazing at the beauty of the sun moving out of its bed or otherwise
+                        enjoying the dim twilight from the Bromo ridge is an unforgettable experience when visiting
+                        Bromo.</p>
+                    <div class="info__btn-box">
+                        <button>read more</button>
+                        <i class='bx bx-right-arrow-alt'></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="section__preview">
+        <div class="container preview__container">
+            <div class="preview__text-box">
+                <span>INDONESIAN CULTURE</span>
+                <h2>Our culture here is very friendly to people</h2>
+                <p>known for his politeness, manners and gentleness. This becomes a characteristic when they mingle with
+                    other tribes and become basic traits that are passed down by their ancestors.</p>
+                <div class="preview__btn-box">
+                    <button>read more</button>
+                    <i class='bx bx-right-arrow-alt'></i>
+                </div>
+            </div>
+            <img src="./image/preview-img.jpg" class="preview__img" alt="preview image" width="598" height="720">
+        </div>
+    </section>
+
+    <section class="section__top">
+        <div class="container top__container">
+            <div class="top__content">
+                <a href="#home">QWERy</a>
+                <div class="top__btn-box">
+                    <span>Ready to explore?</span>
+                    <a href="#" class="btn__top">Get started</a>
+                </div>
+            </div>
+            <hr>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="footer__mailing">
+                <h2>Let's go on vacation, Make your day</h2>
+                <div class="mail__box">
+                    <input type="email" placeholder="Email address">
+                    <div class="mail__btn-box">
+                        <i class='bx bx-chevron-right' ></i>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__content">
+                <div class="column">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#">Email Marketing</a></li>
+                        <li><a href="#">Campaigns</a></li>
+                        <li><a href="#">Branding</a></li>
+                        <li><a href="#">Offline</a></li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <h3>About</h3>
+                    <ul>
+                        <li><a href="#">Our Story</a></li>
+                        <li><a href="#">Benefits</a></li>
+                        <li><a href="#">Team</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <h3>Help</h3>
+                    <ul>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer__top">
+            <div class="container footer__top-container">
+                <div class="footer__help">
+                    <a href="#">Terms & Conditions</a>
+                    <a href="#">Privacy Policy</a>
+                </div>
+                <div class="footer__socials">
+                    <a href="https://www.facebook.com"><img src="/image/Facebook.svg" alt="facebook" width="28.41" height="30"></a>
+                    <a href="https://www.twitter.com"><img src="/image/twitter.svg" alt="twitter" width="28.41" height="30"></a>
+                    <a href="https://www.instagram.com"><img src="/image/instagram.svg" alt="instagram" width="28.41" height="30"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer__copyright">
+            <span>Copyright 2021 QWERy</span>
+        </div>
+    </footer>
+
+
 </body>
+
 </html>
